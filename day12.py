@@ -5,7 +5,7 @@ def read_data(input_list):
     data = dict()
     for line in input_list:
         line = line.strip().split("-")
-        head , tail = line[0], line[1]
+        head,tail = line[0],line[1]
         if head not in data:
             data[head] = [tail]
         else:
@@ -32,6 +32,7 @@ def dfs(path,paths,small_caves_flag):
                 new_path = path[:]
                 new_path.append(neighbour)
                 dfs(new_path,paths,False)
+
     return len(paths)
 
 if __name__ == '__main__':
